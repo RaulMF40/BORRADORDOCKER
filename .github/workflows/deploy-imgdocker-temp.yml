@@ -1,3 +1,5 @@
+# he querido crear dos deploy de img docker distintos, este lo he creado para que configure el flujo temporal que dicen en el punto 2 del ejercicio.
+
 name: Deploy Docker Image Temp.
 
 on:
@@ -22,7 +24,7 @@ jobs:
 
       - name: Run Docker Container
         run: |
-          docker run --name frontend-docker --rm -d -p 3000:3000 raulmoya/trabajo-final-dockerfrontend:v2.0.0
+          docker run --name frontend-docker --rm -d -p 3000:3000 raulmoya/trabajo-final-dockerfrontend:2.0.0
           sleep 10
           curl http://localhost:3000
 

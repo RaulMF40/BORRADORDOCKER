@@ -10,4 +10,6 @@ COPY . .
 
 EXPOSE 3001
 
-CMD ["npm", "run", "start:nodemon"]
+# instale nodemon, para que reinicie automaticamente cualquier cambio en el codigo, si surgiera. 
+
+CMD ["npm", "run", "start:nodemon"]  

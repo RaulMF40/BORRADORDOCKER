@@ -1,15 +1,17 @@
+# he creado el docker compose para crear el servicio backend y frontend, con sus respectivos nombres de contenedor y de imagenes con su version, y sus respectivas conexiones de puertos
+
 services:
   imageFrontend:
     container_name: frontend-docker
     build: ./imageFrontend
-    image: raulmoya/trabajo-final-dockerfrontend:v2.0.0
+    image: raulmoya/trabajo-final-dockerfrontend:2.0.0
     ports:
       - '3000:3000'
 
   imageBackend:
     container_name: backend-docker
     build: ./imageBackend
-    image: raulmoya/trabajo-final-dockerbackend:v2.0.0
+    image: raulmoya/trabajo-final-dockerbackend:2.0.0
     ports:
       - '3001:3000'
   

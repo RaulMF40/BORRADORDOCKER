@@ -8,6 +8,8 @@
 # Para obtener una versión más reciente, debes actualizar el SHA.
 # También puedes hacer referencia a una etiqueta o rama, pero la acción puede cambiar sin ninguna advertencia.
 
+# este deploy lo he creado para hacer un deploy en gitactions, para que pueda construir y publicar una imagen Docker en la rama correspondiente, y aparte que inice sesion en mi docker hub y construya la img del docker frontend (que he escogido en este caso) y la suba a mi docker hub
+
 name: Deploy Docker Image
 
 on:
@@ -63,7 +65,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
-          images: raulmoya/trabajo-final-dockerfrontend:v2.0.0
+          images: raulmoya/trabajo-final-dockerfrontend:2.0.0
 
       - name: Build and push Frontend Docker image
         id: push
@@ -72,5 +74,5 @@ jobs:
           context: ./
           file: ./imageFrontend/Dockerfile
           push: true
-          tags: raulmoya/trabajo-final-dockerfrontend:v2.0.0
+          tags: raulmoya/trabajo-final-dockerfrontend:2.0.0
           labels: ${{ steps.meta.outputs.labels }}
