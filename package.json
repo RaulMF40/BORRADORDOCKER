@@ -2,10 +2,7 @@
   "name": "borrador-docker",
   "version": "1.0.0",
   "description": "final-borrador-dockerfrontback",
-  "main": "jest.config.js",
-  "directories": {
-    "test": "tests"
-  },
+  "main": "index.js",
   "scripts": {
     "start:nodemon": "nodemon src/index.js",
     "start": "node src/index.js",
